@@ -161,7 +161,7 @@ function validateInputs(userName, birthDate, targetYear) {
     return "생년월일은 8자리 숫자로 입력해주세요.";
   }
 
-  if (!/^\d{4}$/.test(targetYear)) {
+  if (targetYear.length === 0 || !/^\d{4}$/.test(targetYear)) {
     return "해운수 연도는 4자리 숫자로 입력해주세요.";
   }
 
@@ -207,6 +207,7 @@ form.addEventListener("submit", (event) => {
 
   const validationError = validateInputs(userName, birthDate, targetYear);
   if (validationError) {
+    resultGrid.innerHTML = "";
     errorMessage.textContent = validationError;
     return;
   }
@@ -215,6 +216,7 @@ form.addEventListener("submit", (event) => {
   const { destiny, personality, soul } = calculateNameNumbers(userName);
 
   if (destiny <= 0) {
+    resultGrid.innerHTML = "";
     errorMessage.textContent = "이름을 한글로 입력해주세요.";
     return;
   }
