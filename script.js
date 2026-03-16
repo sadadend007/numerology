@@ -161,8 +161,8 @@ function validateInputs(userName, birthDate, targetYear) {
     return "생년월일은 8자리 숫자로 입력해주세요.";
   }
 
-  if (targetYear && !/^\d{4}$/.test(targetYear)) {
-    return "연도는 4자리 숫자로 입력해주세요.";
+  if (!/^\d{4}$/.test(targetYear)) {
+    return "해운수 연도는 4자리 숫자로 입력해주세요.";
   }
 
   return null;
@@ -179,13 +179,11 @@ function renderResults(result, targetYear) {
     resultGrid.appendChild(node);
   });
 
-  if (result.fortuneNumber !== null) {
-    const node = resultRowTemplate.content.firstElementChild.cloneNode(true);
-    node.querySelector(".result-title").textContent = "해운수";
-    node.querySelector(".result-description").textContent = `${targetYear}년`;
-    node.querySelector(".result-value").textContent = result.fortuneNumber;
-    resultGrid.appendChild(node);
-  }
+  const node = resultRowTemplate.content.firstElementChild.cloneNode(true);
+  node.querySelector(".result-title").textContent = "해운수";
+  node.querySelector(".result-description").textContent = `${targetYear}년`;
+  node.querySelector(".result-value").textContent = result.fortuneNumber;
+  resultGrid.appendChild(node);
 
   resultSection.classList.remove("hidden");
 }
@@ -229,7 +227,7 @@ form.addEventListener("submit", (event) => {
     completionNumber: calculateCompletionNumber(lifeNumber, destiny),
     birthdayNumber: calculateBirthdayNumber(birthDate),
     yearNumber: calculateYearNumber(birthDate),
-    fortuneNumber: targetYear ? calculateFortuneNumber(birthDate, targetYear) : null
+    fortuneNumber: calculateFortuneNumber(birthDate, targetYear)
   };
 
   renderResults(result, targetYear);

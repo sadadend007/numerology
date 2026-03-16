@@ -10,18 +10,8 @@
 <body>
   <main class="page">
     <section class="hero">
-      <div class="hero-layout">
-        <div>
-          <p class="eyebrow">Numerology</p>
-          <h1>수비학 계산기</h1>
-          <p class="hero-copy">
-            한글 이름과 생년월일을 입력하면 주요 수비학 숫자를 바로 계산합니다.
-          </p>
-        </div>
-        <div class="hero-visual">
-          <img src="./assets/app-icon.svg" alt="수비학 계산기 앱 아이콘">
-        </div>
-      </div>
+      <p class="eyebrow">Numerology</p>
+      <h1>수비학 계산기</h1>
     </section>
 
     <section class="panel">
@@ -37,8 +27,8 @@
         </label>
 
         <label class="field">
-          <span>해운수 연도 (선택)</span>
-          <input id="targetYear" name="targetYear" type="text" inputmode="numeric" placeholder="예: 2026" maxlength="4">
+          <span>해운수 연도 (4자리)</span>
+          <input id="targetYear" name="targetYear" type="text" inputmode="numeric" placeholder="예: 2026" maxlength="4" required>
         </label>
 
         <button class="primary-button" type="submit">계산하기</button>
@@ -49,7 +39,6 @@
     <section id="resultSection" class="panel results hidden" aria-live="polite">
       <div class="results-header">
         <h2>계산 결과</h2>
-        <p>SwiftUI 앱과 동일한 규칙으로 계산됩니다.</p>
       </div>
       <div id="resultGrid" class="result-grid"></div>
     </section>
