@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="letterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8d56b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e8b94a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c9a227;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="numberGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="180" fill="url(#bgGradient)"/>
+
+  <!-- Explosion burst lines from center top -->
+  <line x1="512" y1="320" x2="512" y2="120" stroke="#f8d56b" stroke-width="3" stroke-opacity="0.3"/>
+  <line x1="512" y1="320" x2="350" y2="140" stroke="#f8d56b" stroke-width="2.5" stroke-opacity="0.25"/>
+  <line x1="512" y1="320" x2="674" y2="140" stroke="#f8d56b" stroke-width="2.5" stroke-opacity="0.25"/>
+  <line x1="512" y1="320" x2="200" y2="200" stroke="#f8d56b" stroke-width="2" stroke-opacity="0.2"/>
+  <line x1="512" y1="320" x2="824" y2="200" stroke="#f8d56b" stroke-width="2" stroke-opacity="0.2"/>
+  <line x1="512" y1="320" x2="130" y2="320" stroke="#f8d56b" stroke-width="1.5" stroke-opacity="0.15"/>
+  <line x1="512" y1="320" x2="894" y2="320" stroke="#f8d56b" stroke-width="1.5" stroke-opacity="0.15"/>
+
+  <!-- Sparkle dots - explosion effect -->
+  <circle cx="512" cy="100" r="10" fill="#f8d56b" fill-opacity="0.8"/>
+  <circle cx="350" cy="120" r="8" fill="#f8d56b" fill-opacity="0.7"/>
+  <circle cx="674" cy="120" r="8" fill="#f8d56b" fill-opacity="0.7"/>
+  <circle cx="200" cy="180" r="6" fill="#f8d56b" fill-opacity="0.6"/>
+  <circle cx="824" cy="180" r="6" fill="#f8d56b" fill-opacity="0.6"/>
+  <circle cx="120" cy="300" r="5" fill="#f8d56b" fill-opacity="0.5"/>
+  <circle cx="904" cy="300" r="5" fill="#f8d56b" fill-opacity="0.5"/>
+  <circle cx="430" cy="150" r="4" fill="#ffffff" fill-opacity="0.6"/>
+  <circle cx="594" cy="150" r="4" fill="#ffffff" fill-opacity="0.6"/>
+  <circle cx="280" cy="220" r="3" fill="#ffffff" fill-opacity="0.5"/>
+  <circle cx="744" cy="220" r="3" fill="#ffffff" fill-opacity="0.5"/>
+
+  <!-- Numbers exploding upward from N - fountain/firework style -->
+  <!-- Center top - biggest, most visible -->
+  <text x="490" y="130" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="#f8d56b" fill-opacity="0.85" filter="url(#numberGlow)">9</text>
+
+  <!-- Upper left arc -->
+  <text x="320" y="160" font-family="Georgia, serif" font-size="64" font-weight="bold" fill="#f8d56b" fill-opacity="0.75" filter="url(#numberGlow)">7</text>
+  <text x="180" y="240" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#f8d56b" fill-opacity="0.6" filter="url(#numberGlow)">3</text>
+  <text x="120" y="350" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#f8d56b" fill-opacity="0.45" filter="url(#numberGlow)">1</text>
+
+  <!-- Upper right arc -->
+  <text x="640" y="160" font-family="Georgia, serif" font-size="64" font-weight="bold" fill="#f8d56b" fill-opacity="0.75" filter="url(#numberGlow)">5</text>
+  <text x="780" y="240" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#f8d56b" fill-opacity="0.6" filter="url(#numberGlow)">8</text>
+  <text x="840" y="350" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#f8d56b" fill-opacity="0.45" filter="url(#numberGlow)">2</text>
+
+  <!-- Additional smaller numbers for fuller explosion effect -->
+  <text x="420" y="100" font-family="Georgia, serif" font-size="40" fill="#f8d56b" fill-opacity="0.5" filter="url(#numberGlow)">4</text>
+  <text x="570" y="100" font-family="Georgia, serif" font-size="40" fill="#f8d56b" fill-opacity="0.5" filter="url(#numberGlow)">6</text>
+
+  <!-- Main "N" letter - larger and centered -->
+  <text x="512" y="700"
+        font-family="Georgia, Times, serif"
+        font-size="680"
+        font-weight="bold"
+        fill="url(#letterGradient)"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        filter="url(#glow)">N</text>
+
+  <!-- Subtle inner glow on N -->
+  <text x="512" y="700"
+        font-family="Georgia, Times, serif"
+        font-size="680"
+        font-weight="bold"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="1.5"
+        stroke-opacity="0.35"
+        text-anchor="middle"
+        dominant-baseline="middle">N</text>
+</svg>
