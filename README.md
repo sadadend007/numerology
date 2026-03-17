@@ -1,6 +1,6 @@
 # Numerology Web
 
-SwiftUI 수비학 앱을 정적 웹 리소스(`HTML`, `CSS`, `JavaScript`)로 옮긴 프로젝트입니다.
+수비학 앱을 정적 웹 리소스(`HTML`, `CSS`, `JavaScript`)로 옮긴 프로젝트입니다.
 
 ## 파일 구성
 
